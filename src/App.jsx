@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import Auth from './Components/Auth';
+import Dashboard from './Components/Dashboard';
 
 const App = () => {
 
@@ -8,7 +9,10 @@ const App = () => {
 
   return (    
     <div className="App">
-      { authenticated ? <p>Welcome, {user}</p> : <Auth setUser={setUser} setAuthenticated={setAuthenticated} /> }
+      { authenticated ? 
+        <Dashboard user={user}/>
+        : <Auth setUser={setUser} setAuthenticated={setAuthenticated} /> 
+      }
     </div>
   )
 };
