@@ -7,7 +7,7 @@ const Auth = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (username.toLowerCase() === "pragyakar") {
+    if (username.toLowerCase() === "pragyakar" && password.toLowerCase() === "pragyakar") {
       props.setUser(username);
       props.setAuthenticated(true);
     } else {
