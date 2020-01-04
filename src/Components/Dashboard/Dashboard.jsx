@@ -1,11 +1,14 @@
 import React from 'react';
+import Topbar from './Topbar/Topbar';
 
 const Dashboard = (props) => {
 
   const { user } = props;
 
   return (
-  <p>Welcome, {user}</p>
+    <div>
+      <Topbar user={user} />
+    </div>
   );
 }
 
