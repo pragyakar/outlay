@@ -140,5 +140,10 @@ body, button, input {
 /* Content Panel Component */
 
 .content-panel-container {
-  margin-left: 240px; 
+  margin-left: 260px; 
+}
+
+.main-container {
+  margin: 20px;
+  min-height: calc(100vh - 89px);
 }
