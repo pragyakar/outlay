@@ -5,7 +5,7 @@ import Dashboard from './Components/Dashboard';
 const App = () => {
 
   const [authenticated, setAuthenticated] = useState(false);
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState('pragyakar');
 
   return (    
     <div className="App">

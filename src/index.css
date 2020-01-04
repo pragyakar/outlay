@@ -13,6 +13,8 @@ body, button, input {
   color: rgb(255, 255, 255);
 }
 
+/* Auth Component */
+
 .auth-container {
   height: 100vh;
   background-size: cover;
@@ -68,3 +70,21 @@ body, button, input {
   color: rgb(255, 66, 66);
   display: block;
 }
+
+/* Topbar Component */
+
+.topbar-container {
+  background-color: rgb(53, 53, 53);
+  padding: 15px;
+  text-align: right;
+}
+
+.topbar-text {
+  color: white;
+  font-size: 15px;
+}
+
+.topbar-user {
+  color: rgb(88, 174, 255);
+}
+
