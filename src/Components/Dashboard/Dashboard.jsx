@@ -1,5 +1,6 @@
 import React from 'react';
-import Topbar from './Topbar/Topbar';
+import Topbar from './Topbar';
+import Sidebar from './Sidebar';
 
 const Dashboard = (props) => {
 
@@ -7,7 +8,10 @@ const Dashboard = (props) => {
 
   return (
     <div>
-      <Topbar user={user} />
+      <Sidebar />
+      <div className="content-panel-container">
+        <Topbar user={user} />
+      </div>
     </div>
   );
 }
