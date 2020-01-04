@@ -4,14 +4,11 @@ import Auth from './Components/Auth';
 const App = () => {
 
   const [authenticated, setAuthenticated] = useState(false);
-
-  useEffect(() => {
-    setAuthenticated(true);
-  }, []);
+  const [user, setUser] = useState('');
 
   return (    
     <div className="App">
-      { authenticated ? <p>Dashboard</p> : <Auth /> }
+      { authenticated ? <p>Welcome, {user}</p> : <Auth setUser={setUser} setAuthenticated={setAuthenticated} /> }
     </div>
   )
 };
