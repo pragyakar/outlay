@@ -1,15 +1,16 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 const ContentPanel = () => {
   return (
     <div className="main-container">
       <Switch>
-        <Route exact path="/" component={add} />
+        <Redirect from="/" exact to="/add" />
         <Route path="/add" component={add} />
         <Route path="/history" component={history} />
         <Route path="/reports" component={reports} />
         <Route path="/statistics" component={statistics} />
+        <Redirect to={'/add'} />
       </Switch>
     </div>
   );

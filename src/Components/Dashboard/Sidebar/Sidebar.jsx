@@ -7,27 +7,24 @@ import { MdTimeline, MdCreditCard } from 'react-icons/md';
 
 const Sidebar = (props) => {
   
-  const getCurrentPath = () => {
-    const { pathname } = props.location;
-    return pathname.split('/')[1];
-  }
+  const { pathname } = props.location;
   
   return (
     <div className="sidebar-container">
       <span className="sidebar-logo">Outlay</span>
-      <Link to="/add" className={`sidebar-nav ${getCurrentPath() === 'add' ? 'active' : ''}`}>
+      <Link to="/add" className={`sidebar-nav ${pathname === '/add' ? 'active' : ''}`}>
         <FaFolderPlus className="sidebar-icon" />
         Add Expense
       </Link>
-      <Link to="/history" className={`sidebar-nav ${getCurrentPath() === 'history' ? 'active' : ''}`}>
+      <Link to="/history" className={`sidebar-nav ${pathname === '/history' ? 'active' : ''}`}>
         <MdCreditCard className="sidebar-icon" />
         History
       </Link>
-      <Link to="/reports" className={`sidebar-nav ${getCurrentPath() === 'reports' ? 'active' : ''}`}>
+      <Link to="/reports" className={`sidebar-nav ${pathname === '/reports' ? 'active' : ''}`}>
         <MdTimeline className="sidebar-icon" />
         Reports
       </Link>
-      <Link to="/statistics" className={`sidebar-nav ${getCurrentPath() === 'statistics' ? 'active' : ''}`}>
+      <Link to="/statistics" className={`sidebar-nav ${pathname === '/statistics' ? 'active' : ''}`}>
         <IoMdPodium className="sidebar-icon" />
         Statistics
       </Link>
