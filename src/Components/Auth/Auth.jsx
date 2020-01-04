@@ -16,30 +16,31 @@ const Auth = (props) => {
   }
   
   return (
-    <div>
+    <div className="auth-container">
+      <span className="logo-lg">Outlay</span>
       <form onSubmit={handleSubmit}>
-        <input 
-          type="text" 
-          placeholder="pragyakar"
-          name="username"
-          value={username}
-          autoComplete="off"
-          onChange={e => setUsername(e.target.value)}  
-        />
-        <br />
-        <br />
-        <input 
-          type="password" 
-          placeholder="password"
-          name="password"
-          value={password}
-          autoComplete="off"
-          onChange={e => setPassword(e.target.value)} 
-        />
-        <br />
-        <br />
-        <button type="submit">Submit</button>
-        <p>{error}</p>
+        <div className="auth-box">  
+          <input 
+            type="text" 
+            placeholder="username"
+            name="username"
+            value={username}
+            autoComplete="off"
+            onChange={e => setUsername(e.target.value)}  
+            className="auth-input"
+          />
+          <input 
+            type="password" 
+            placeholder="password"
+            name="password"
+            value={password}
+            autoComplete="off"
+            onChange={e => setPassword(e.target.value)}
+            className="auth-input" 
+          />
+        </div>
+        <button type="submit" className="auth-button">Login</button>
+        <p className="auth-error">&nbsp;{error}</p>
       </form>
     </div>
   );
