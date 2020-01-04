@@ -9,7 +9,6 @@ const ContentPanel = () => {
         <Route path="/add" component={add} />
         <Route path="/history" component={history} />
         <Route path="/reports" component={reports} />
-        <Route path="/statistics" component={statistics} />
         <Redirect to={'/add'} />
       </Switch>
     </div>
@@ -27,9 +26,4 @@ const history = () => {
 const reports = () => {
   return ( <p>Reports</p> )
 }
-
-const statistics = () => {
-  return ( <p>Statistics</p> )
-}
-
 export default ContentPanel;
