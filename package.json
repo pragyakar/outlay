@@ -13,6 +13,7 @@
   "author": "pragyakar <pragyakar75@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
