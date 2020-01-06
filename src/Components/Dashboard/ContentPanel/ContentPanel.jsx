@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { addExpense } from '../../../store/actions/expenseActions';
 
-const ContentPanel = () => {
+const ContentPanel = (props) => {
   return (
     <div className="main-container">
       <Switch>
@@ -26,4 +28,17 @@ const history = () => {
 const reports = () => {
   return ( <p>Reports</p> )
 }
-export default ContentPanel;
+
+const mapStateToProps = (state) => {
+  return {
+    expenses: state.expense.expenses
+  }
+} 
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addExpense: (expense) => dispatch(addExpense(expense))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ContentPanel);
