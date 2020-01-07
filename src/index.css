@@ -242,6 +242,16 @@ body, button, input {
   transition: 0.3s ease;
 }
 
+.history-error-row {
+  background: var(--white);
+  color: var(--light-grey);
+  margin: 7px 10px;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
 .title-row {
   background: var(--blue);
   color: var(--white);

@@ -16,7 +16,7 @@ const Table = (props) => {
         expenses ? expenses.map((expense) =>{
           const { id, ...rest} = expense;
           return (<TableRow key={id} {...rest} />);
-        }): 'No records'
+        }): <div className="history-error-row">No records</div>
       } 
     </div>
   );
