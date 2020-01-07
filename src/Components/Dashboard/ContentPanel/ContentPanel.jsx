@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addExpense } from '../../../store/actions/expenseActions';
+import Records from './Records';
 
 const ContentPanel = (props) => {
   return (
@@ -9,7 +10,7 @@ const ContentPanel = (props) => {
       <Switch>
         <Redirect from="/" exact to="/add" />
         <Route path="/add" component={add} />
-        <Route path="/records" component={records} />
+        <Route path="/records" component={Records} />
         <Redirect to={'/add'} />
       </Switch>
     </div>
@@ -18,10 +19,6 @@ const ContentPanel = (props) => {
 
 const add = () => {
   return ( <p>Add</p> )
-}
-
-const records = () => {
-  return ( <p>Records</p> )
 }
 
 const mapStateToProps = (state) => {
