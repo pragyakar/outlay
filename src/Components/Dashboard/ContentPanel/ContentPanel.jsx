@@ -9,8 +9,7 @@ const ContentPanel = (props) => {
       <Switch>
         <Redirect from="/" exact to="/add" />
         <Route path="/add" component={add} />
-        <Route path="/history" component={history} />
-        <Route path="/reports" component={reports} />
+        <Route path="/records" component={records} />
         <Redirect to={'/add'} />
       </Switch>
     </div>
@@ -21,12 +20,8 @@ const add = () => {
   return ( <p>Add</p> )
 }
 
-const history = () => {
-  return ( <p>History</p> )
-}
-
-const reports = () => {
-  return ( <p>Reports</p> )
+const records = () => {
+  return ( <p>Records</p> )
 }
 
 const mapStateToProps = (state) => {

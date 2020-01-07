@@ -15,13 +15,9 @@ const Sidebar = (props) => {
         <FaFolderPlus className="sidebar-icon" />
         Add Expense
       </Link>
-      <Link to="/history" className={`sidebar-nav ${pathname === '/history' ? 'active' : ''}`}>
-        <MdCreditCard className="sidebar-icon" />
-        History
-      </Link>
-      <Link to="/reports" className={`sidebar-nav ${pathname === '/reports' ? 'active' : ''}`}>
+      <Link to="/records" className={`sidebar-nav ${pathname === '/records' ? 'active' : ''}`}>
         <MdTimeline className="sidebar-icon" />
-        Reports
+        Records
       </Link>
     </div>
   );
