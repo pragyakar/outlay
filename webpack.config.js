@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { getEnvConfig } = require('./env/dot-env');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/index.jsx',
@@ -21,9 +23,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'
+    }),
+    new webpack.DefinePlugin({
+      envConfig: JSON.stringify(getEnvConfig())
     })
   ],
   devServer: {
     historyApiFallback: true,
   },
+  node: {
+    fs: 'empty'
+  }
 };
