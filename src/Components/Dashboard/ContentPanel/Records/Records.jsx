@@ -1,11 +1,12 @@
 import React from 'react';
+import History from './History';
 
 const Records = () => {
   return (
     <div className="records-container">
       <div className="grid-wrapper">
         <div className="grid-1 grid-table">
-          {/* History Component */}
+          <History />
         </div>
         <div className="grid-2 grid-side">
           {/* Add Expense */}
