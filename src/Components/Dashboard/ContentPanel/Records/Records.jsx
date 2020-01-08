@@ -1,7 +1,8 @@
 import React from 'react';
 import History from './History';
 import Welcome from './Welcome';
-import RecentStatistics from './RecentStatistics';
+import RecentStatistics from './Statistics/RecentStatistics';
+import TopStatistics from './Statistics/TopStatistics';
 
 const Records = () => {
   return (
@@ -17,6 +18,7 @@ const Records = () => {
           <RecentStatistics />
         </div>
         <div className="grid-3 grid-side">
+          <TopStatistics />
         </div>
         <div className="grid-4 grid-side">
           {/* Graph 1 */}
