@@ -45,7 +45,8 @@ export default compose(
   firestoreConnect([
     { 
       collection: 'expenses', 
-      limit: 10 
+      limit: 30,
+      orderBy: 'timestamp'
     }
   ])
 )(Records);
