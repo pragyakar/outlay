@@ -2,26 +2,40 @@ import React from 'react';
 import ExpenseChart from './ExpenseChart';
 import moment from 'moment';
 
-const Report = (props) => {
-
-  const { expenses } = props;
+const groupExpensesByDay = (expenses) => {
   const myData = []; 
   expenses && expenses.map((expense) => {
     const x = moment(+expense.timestamp).format('DD/MM');
-    const y = expense.amount;
-    const obj = { 
-      x,
-      y
-    }
-    myData.push(obj);
+    const y = +expense.amount;
+    const obj = {x, y}
+    let repeat = false
+    myData.map(data => {
+      if (data.x === obj.x) {
+        repeat = true;
+        data.y = data.y + (+obj.y)
+      } else {
+        repeat = false
+      }
+    });
+    if (repeat !== true) {
+      myData.push(obj);
+    } 
   });
+  return myData;
+} 
+
+const Report = (props) => {
+
+  const { expenses } = props;
   
+  const graphData = groupExpensesByDay(expenses);
+
   const data = {
     "id": "Expenses",
     "color": "hsl(80, 70%, 50%)",
-    "data": myData
+    "data": graphData
   }
-  console.log(myData);
+  // console.log(graphData);
   
   return (
     <div className="report-container">

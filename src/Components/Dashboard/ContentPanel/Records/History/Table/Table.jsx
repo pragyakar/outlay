@@ -11,7 +11,6 @@ const Table = (props) => {
         <div>Expense</div>
         <div>Remarks</div>
         <div>Tag</div>
-        <div>Actions</div>
       </div>
       {
         expenses ? expenses.map((expense) =>{

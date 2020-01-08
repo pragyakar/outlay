@@ -227,7 +227,7 @@ body, button, input {
 
 .history-table-row {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 25% 35% 20%;
   background: var(--white);
   color: var(--light-grey);
   margin: 7px 10px;
