@@ -14,7 +14,7 @@ const TableRow = (props) => {
           {props.tag}
         </span>
       </div>
-      <div>Edit | Delete</div>
+      <div>🖊️  | ❌</div>
     </div>
   );
 }
