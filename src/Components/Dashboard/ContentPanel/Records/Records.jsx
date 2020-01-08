@@ -1,6 +1,7 @@
 import React from 'react';
 import History from './History';
 import Welcome from './Welcome';
+import RecentStatistics from './RecentStatistics';
 
 const Records = () => {
   return (
@@ -13,10 +14,9 @@ const Records = () => {
           <History />
         </div>
         <div className="grid-2 grid-side">
-          {/* Item 1 */}
+          <RecentStatistics />
         </div>
         <div className="grid-3 grid-side">
-          {/* Item 2 */}
         </div>
         <div className="grid-4 grid-side">
           {/* Graph 1 */}
