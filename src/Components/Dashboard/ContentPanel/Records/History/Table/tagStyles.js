@@ -1,6 +1,5 @@
 const tagStyle = {
-  backgroundColor: `rgba(0, 122, 126,0.5)`,
-  color: 'white',
+  backgroundColor: 'rgba(0, 122, 126, 0.5)',
   border: '2px solid rgba(0, 122, 126, 0.1)'
 }
 

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addExpense } from '../../../store/actions/expenseActions';
@@ -21,16 +21,13 @@ const add = () => {
   return ( <p>Add</p> )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    expenses: state.expense.expenses
-  }
-} 
-
 const mapDispatchToProps = (dispatch) => {
   return {
     addExpense: (expense) => dispatch(addExpense(expense))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ContentPanel);
+export default connect(
+  null, 
+  mapDispatchToProps
+)(ContentPanel);

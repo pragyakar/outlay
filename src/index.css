@@ -261,4 +261,5 @@ body, button, input {
   padding: 5px 10px;
   border-radius: 30px;
   font-size: 14px;
+  color: var(--white);
 }
