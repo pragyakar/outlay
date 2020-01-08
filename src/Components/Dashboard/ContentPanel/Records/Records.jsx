@@ -4,24 +4,21 @@ import History from './History';
 const Records = () => {
   return (
     <div className="records-container">
+      <div className="welcome-wrapper">
+        {/* Welcome component */}
+      </div>
       <div className="grid-wrapper">
         <div className="grid-1 grid-table">
           <History />
         </div>
         <div className="grid-2 grid-side">
-          {/* Add Expense */}
+          {/* Item 1 */}
         </div>
         <div className="grid-3 grid-side">
-          {/* Last 7 days */}
+          {/* Item 2 */}
         </div>
         <div className="grid-4 grid-side">
-          {/* Last 30 days */}
-        </div>
-        <div className="grid-5 grid-side">
-          {/* This week */}
-        </div>
-        <div className="grid-6 grid-side">
-          {/* This month */}
+          {/* Graph 1 */}
         </div>
       </div>
     </div>
