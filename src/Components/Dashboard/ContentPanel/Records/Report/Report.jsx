@@ -27,7 +27,6 @@ const groupExpensesByDay = (expenses) => {
 const Report = (props) => {
 
   const { expenses } = props;
-  
   const graphData = groupExpensesByDay(expenses);
 
   const data = {

@@ -5,14 +5,14 @@ import moment from 'moment';
 const RecentStatistics = (props) => {
 
   const { expenses } = props;
-  const oneDayAgo = moment().subtract(24, 'hours').format("x");
+  const today = moment().startOf('day').format("x");
   const oneWeekAgo = moment().subtract(7, 'days').format("x");
   const oneMonthAgo = moment().subtract(30, 'days').format("x");
   
   const todaysExpenses = () => {
     let total = 0;
-    expenses.map((expense) => {
-      if (expense.timestamp > oneDayAgo) {
+    expenses && expenses.map((expense) => {
+      if (expense.timestamp > today) {
         total += +expense.amount
       }
     });
@@ -21,7 +21,7 @@ const RecentStatistics = (props) => {
 
   const weeksExpenses = () => {
     let total = 0;
-    expenses.map((expense) => {
+    expenses && expenses.map((expense) => {
       if (expense.timestamp > oneWeekAgo) {
         total += +expense.amount
       }
@@ -31,7 +31,7 @@ const RecentStatistics = (props) => {
 
   const monthsExpenses = () => {
     let total = 0;
-    expenses.map((expense) => {
+    expenses && expenses.map((expense) => {
       if (expense.timestamp > oneMonthAgo) {
         total += +expense.amount
       }
@@ -42,7 +42,7 @@ const RecentStatistics = (props) => {
   return (
     <div className="statistics-container">
       <h1 className="statistics-title">Recent Stats 🕒</h1>
-      <StatBox label={"Last 24 hours"} amount={todaysExpenses()} />
+      <StatBox label={"Today"} amount={todaysExpenses()} />
       <StatBox label={"Last 7 days"} amount={weeksExpenses()} />
       <StatBox label={"Last 30 days"} amount={monthsExpenses()} />
     </div>
