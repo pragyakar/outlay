@@ -232,7 +232,7 @@ body, button, input {
 
 .history-table-row {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   background: var(--white);
   color: var(--light-grey);
   margin: 7px 10px;
@@ -255,4 +255,10 @@ body, button, input {
 .title-row {
   background: var(--blue);
   color: var(--white);
+}
+
+.table-tag {
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 14px;
 }

@@ -10,6 +10,7 @@ const Table = (props) => {
         <div>Date</div>
         <div>Expense</div>
         <div>Remarks</div>
+        <div>Tag</div>
         <div>Actions</div>
       </div>
       {
