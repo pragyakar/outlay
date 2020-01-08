@@ -5,7 +5,11 @@ import RecentStatistics from './Statistics/RecentStatistics';
 import TopStatistics from './Statistics/TopStatistics';
 import Report from './Report';
 
-const Records = () => {
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
+
+const Records = (props) => {
   return (
     <div className="records-container">
       <div className="welcome-wrapper">
@@ -13,20 +17,35 @@ const Records = () => {
       </div>
       <div className="grid-wrapper">
         <div className="grid-1 grid-table">
-          <History />
+          <History expenses={props.expenses} />
         </div>
         <div className="grid-2 grid-side">
-          <RecentStatistics />
+          <RecentStatistics expenses={props.expenses} />
         </div>
         <div className="grid-3 grid-side">
-          <TopStatistics />
+          <TopStatistics expenses={props.expenses} />
         </div>
         <div className="grid-4 grid-side">
-          <Report />
+          <Report expenses={props.expenses} />
         </div>
       </div>
     </div>
   )
 }
 
-export default Records;
+const mapStateToProps = (state) => {
+  return {
+    expenses: state.expense.expenses
+    // expenses: state.firestore.ordered.expenses
+  }
+}
+
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { 
+      collection: 'expenses', 
+      limit: 10 
+    }
+  ])
+)(Records);
