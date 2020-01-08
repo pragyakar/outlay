@@ -3,6 +3,7 @@ import History from './History';
 import Welcome from './Welcome';
 import RecentStatistics from './Statistics/RecentStatistics';
 import TopStatistics from './Statistics/TopStatistics';
+import Report from './Report';
 
 const Records = () => {
   return (
@@ -21,7 +22,7 @@ const Records = () => {
           <TopStatistics />
         </div>
         <div className="grid-4 grid-side">
-          {/* Graph 1 */}
+          <Report />
         </div>
       </div>
     </div>

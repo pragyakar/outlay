@@ -299,7 +299,6 @@ body, button, input {
   padding: 5px;
   font-weight: 700;
   color: var(--text-grey);
-
 }
 
 .statistics-item {
@@ -335,4 +334,22 @@ body, button, input {
 .tips {
   font-size: 13px;
   font-weight: 200;
+}
+
+/* Report Component */
+
+.report-container {
+  padding: 20px;
+}
+
+.report-title {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  padding: 5px;
+  font-weight: 700;
+  color: var(--text-grey);
+}
+
+.chart-wrapper {
+  height: 300px;
 }
