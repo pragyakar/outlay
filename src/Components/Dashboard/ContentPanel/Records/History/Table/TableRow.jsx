@@ -9,7 +9,11 @@ const TableRow = (props) => {
       <div>{moment(+props.timestamp).format("MMM Do YYYY")}</div>
       <div>NRs. {props.amount}</div>
       <div>{props.remarks}</div>
-      <div><span className="table-tag" style={getTagStyle()}>{props.tag}</span></div>
+      <div>
+        <span className="table-tag" style={getTagStyle(props.tag)}>
+          {props.tag}
+        </span>
+      </div>
       <div>Edit | Delete</div>
     </div>
   );
