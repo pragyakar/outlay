@@ -7,8 +7,8 @@ import { compose } from 'redux';
 const History = (props) => {
   return (
     <div className="history-container">
-      <p className="history-title">Recent Expenses</p>
-      <p className="history-subtitle">Expense history from the last 10 days</p>
+      <p className="container-title">Recent Expenses</p>
+      <p className="container-subtitle">Expense history from the last 5 days</p>
       <HistoryTable expenses={props.expenses}/>
     </div> 
   )

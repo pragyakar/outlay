@@ -1,11 +1,12 @@
 import React from 'react';
 import History from './History';
+import Welcome from './Welcome';
 
 const Records = () => {
   return (
     <div className="records-container">
       <div className="welcome-wrapper">
-        {/* Welcome component */}
+        <Welcome />
       </div>
       <div className="grid-wrapper">
         <div className="grid-1 grid-table">
