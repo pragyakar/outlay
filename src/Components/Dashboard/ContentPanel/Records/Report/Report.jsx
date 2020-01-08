@@ -3,7 +3,7 @@ import ExpenseChart from './ExpenseChart';
 import moment from 'moment';
 
 const groupExpensesByDay = (expenses) => {
-  const myData = []; 
+  let myData = []; 
   expenses && expenses.map((expense) => {
     const x = moment(+expense.timestamp).format('DD/MM');
     const y = +expense.amount;
