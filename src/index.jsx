@@ -40,4 +40,4 @@ ReactDOM.render(
       <App />
     </ReactReduxFirebaseProvider>
   </Provider>
-, document.getElementById('app'));
+, document.getElementById('root'));

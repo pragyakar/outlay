@@ -12,7 +12,7 @@ const StatBox = (props) => {
         <CountUp 
           start={0}
           end={props.amount}
-          duration={3}
+          duration={1}
           prefix=" "
         />
       </span>
