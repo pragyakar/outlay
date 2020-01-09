@@ -13,6 +13,7 @@ const Dashboard = (props) => {
   const { user, expenses } = props;
   return (
     <div className="main-container">
+    {expenses ? 
       <div className="records-container">
         <div className="welcome-wrapper">
           <Welcome user={user}/>
@@ -32,6 +33,7 @@ const Dashboard = (props) => {
           </div>
         </div>
       </div>
+    : "Loading"}
     </div>
   );
 }
