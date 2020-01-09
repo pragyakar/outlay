@@ -1,6 +1,6 @@
 export const addExpense = (expense) => {
-  return (dispatch, getState, { getFirebase, getFirestore}) => {
-    const firestore = getFirestore();
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firestore = getFirebase().firestore()
     firestore.collection('expenses').add({
       ...expense
     }).then(() => {

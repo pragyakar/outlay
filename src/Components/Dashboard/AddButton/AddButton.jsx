@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import AddModal from './AddModal';
+import { connect } from 'react-redux';
+import { addExpense } from '../../../store/actions/expenseActions';  
 
-const AddButton = () => {
+const AddButton = (props) => {
 
   const [modalVisibility, setModalVisibility] = useState(false);
 
@@ -10,7 +12,8 @@ const AddButton = () => {
   }
 
   const handleSubmit = (expenseObject) => {
-    console.log(expenseObject); 
+    props.addExpense(expenseObject);
+    toggleModal();
   }
 
   return (
@@ -25,4 +28,13 @@ const AddButton = () => {
   );
 }
 
-export default AddButton;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addExpense: (expense) => dispatch(addExpense(expense))
+  }
+}
+
+export default connect(
+  null, 
+  mapDispatchToProps
+)(AddButton);

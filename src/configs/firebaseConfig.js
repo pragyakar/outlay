@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import Env from '../env';
 
-var firebaseConfig = {
+const firebaseConfig = {
   apiKey: Env.firebaseApiKey,
   authDomain: Env.firebaseAuthDomain,
   databaseURL: Env.firebaseDatabaseUrl,
@@ -12,7 +12,7 @@ var firebaseConfig = {
   appId: Env.firebaseAppId
 };
 
-firebase.initializeApp(firebaseConfig);
-firebase.firestore().settings({});
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+export const firestore = firebaseApp.firestore();
 
 export default firebase;
