@@ -8,6 +8,7 @@ import Welcome from './Welcome';
 import RecentStatistics from './Statistics/RecentStatistics';
 import TopStatistics from './Statistics/TopStatistics';
 import Report from './Report';
+import LogoBox from './LogoBox';
 
 const Dashboard = (props) => {
 
@@ -17,9 +18,18 @@ const Dashboard = (props) => {
     <div className="main-container">
     {expenses ? 
       <div className="records-container">
-        <div className="welcome-wrapper">
-          <Welcome user={user} />
+        <div className="header-container">
+          <div className="logo-wrapper">
+            <LogoBox />
+          </div>
+          <div className="welcome-wrapper grid-side">
+            <Welcome user={user} />
+          </div>
+          <div className="add-wrapper">
+
+          </div>
         </div>
+        
         <div className="grid-wrapper">
           <div className="grid-1 grid-table">
             <History expenses={expenses} />
