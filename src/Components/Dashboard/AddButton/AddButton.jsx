@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Modal from '../../UI/Modal';
+import AddModal from './AddModal';
 
 const AddButton = () => {
 
@@ -9,17 +9,19 @@ const AddButton = () => {
     setModalVisibility(!modalVisibility);
   }
 
+  const handleSubmit = (expenseObject) => {
+    console.log(expenseObject); 
+  }
+
   return (
-    <div className="add-container" onClick={toggleModal}>
-      <p className="add-button-text">Add Expense</p>
-      { modalVisibility &&
-        <Modal>
-          <div className="modal-container">
-            <h1 onClick={toggleModal}>Modal test</h1>
-          </div>
-        </Modal>
+    <>
+      <div className="add-container" onClick={toggleModal}>
+        <p className="add-button-text">Add Expense</p>
+      </div>
+      { !modalVisibility &&
+        <AddModal closeModal={toggleModal} handleSubmit={handleSubmit}/>
       }
-    </div>
+    </>
   );
 }
 
