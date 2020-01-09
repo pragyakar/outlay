@@ -21,7 +21,7 @@ const AddButton = (props) => {
       <div className="add-container" onClick={toggleModal}>
         <p className="add-button-text">Add Expense</p>
       </div>
-      { !modalVisibility &&
+      { modalVisibility &&
         <AddModal closeModal={toggleModal} handleSubmit={handleSubmit}/>
       }
     </>
