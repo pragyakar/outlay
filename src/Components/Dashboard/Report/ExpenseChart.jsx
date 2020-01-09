@@ -4,7 +4,7 @@ import { ResponsiveLine } from '@nivo/line'
 const ExpenseChart = ({ data }) => (
   <ResponsiveLine
     data={data}
-    margin={{ top: 20, right: 50, bottom: 45, left: 50 }}
+    margin={{ top: 20, right: 20, bottom: 45, left: 60 }}
     xScale={{ type: 'point' }}
     yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
     axisTop={null}
