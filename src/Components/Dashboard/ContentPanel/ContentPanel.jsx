@@ -8,10 +8,10 @@ const ContentPanel = (props) => {
   return (
     <div className="main-container">
       <Switch>
-        <Redirect from="/" exact to="/add" />
+        <Redirect from="/" exact to="/records" />
         <Route path="/add" component={add} />
         <Route path="/records" component={Records} />
-        <Redirect to={'/add'} />
+        <Redirect to={'/records'} />
       </Switch>
     </div>
   );

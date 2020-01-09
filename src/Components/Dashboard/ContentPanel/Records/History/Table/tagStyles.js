@@ -24,7 +24,7 @@ const defaultTagStyle = {
 }
 
 const getTagStyle = (tagName) => {
-  const tag = tagName.toLowerCase();
+  const tag = tagName && tagName.toLowerCase();
   switch (tag) {
     case 'petrol':
       return petrolTagStyle;
