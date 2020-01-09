@@ -9,7 +9,8 @@ import RecentStatistics from './Statistics/RecentStatistics';
 import TopStatistics from './Statistics/TopStatistics';
 import Report from './Report';
 import LogoBox from './LogoBox';
-import AddButton from './AddButton/AddButton';
+import AddButton from './AddButton';
+import Loader from '../UI/Loader';
 
 const Dashboard = (props) => {
 
@@ -46,7 +47,7 @@ const Dashboard = (props) => {
           </div>
         </div>
       </div>
-    : "Loading"}
+    : <Loader />}
     </div>
   );
 }
