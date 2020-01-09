@@ -1,22 +1,24 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
+import {firestoreConnect} from 'react-redux-firebase';
+
 import History from './History';
 import Welcome from './Welcome';
 import RecentStatistics from './Statistics/RecentStatistics';
 import TopStatistics from './Statistics/TopStatistics';
 import Report from './Report';
 
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import {firestoreConnect} from 'react-redux-firebase';
-
 const Dashboard = (props) => {
+
   const { user, expenses } = props;
+
   return (
     <div className="main-container">
     {expenses ? 
       <div className="records-container">
         <div className="welcome-wrapper">
-          <Welcome user={user}/>
+          <Welcome user={user} />
         </div>
         <div className="grid-wrapper">
           <div className="grid-1 grid-table">
