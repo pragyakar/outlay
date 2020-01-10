@@ -3,7 +3,8 @@ import React from 'react';
 const Loader = () => {
   return (
     <div className="loader-container">  
-      <span>Loading...</span>
+      <div className="loader" />
+      <span className="loading-text">Please wait while we calculate your massive expenses...</span>
     </div>
   );
 }
