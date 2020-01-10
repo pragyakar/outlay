@@ -17,7 +17,7 @@ const Auth = (props) => {
   
   return (
     <div className="auth-container">
-      <span className="logo-lg">Outlay</span>
+      <span className="auth-logo-lg">Outlay</span>
       <form onSubmit={handleSubmit}>
         <div className="auth-box">  
           <input 
