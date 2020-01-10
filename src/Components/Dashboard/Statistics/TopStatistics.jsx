@@ -16,7 +16,7 @@ const TopStatistics = (props) => {
     setAverageExpense(getAverageExpense(amountArray));
     setHighestExpense(getHighestExpense(amountArray));
     setLowestExpense(getLowestExpense(amountArray));
-  }, []);
+  }, [expenses]);
   
   return (
     <div className="statistics-container">

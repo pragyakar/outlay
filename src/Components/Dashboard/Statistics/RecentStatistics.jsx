@@ -16,7 +16,7 @@ const RecentStatistics = (props) => {
     setTodaysExpenses(getTodaysExpenses(expenses, today));
     setWeeksExpenses(getWeeksExpenses(expenses, oneWeekAgo));
     setMonthsExpenses(getMonthsExpenses(expenses, oneMonthAgo));
-  }, []); 
+  }, [expenses]); 
 
   return (
     <div className="statistics-container">
