@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TableRow from './TableRow';
 
 const Table = (props) => {
+
   const { expenses } = props;
+  const [ expenseHistory, setExpenseHistory] = useState([]);
+
+  useEffect(() => {
+    setExpenseHistory(expenses.reverse().slice(0,4));
+  }, [expenses])
   
   return (
     <div className="history-table">
@@ -13,7 +19,7 @@ const Table = (props) => {
         <div>Tag</div>
       </div>
       {
-        expenses ? expenses.map((expense) =>{
+        expenseHistory ? expenseHistory.map((expense) =>{
           const { id, ...rest} = expense;
           return (<TableRow key={id} {...rest} />);
         }): <div className="history-error-row">No records</div>
