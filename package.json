@@ -43,6 +43,9 @@
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "build": "webpack -p",
+    "predeploy": "webpack -p",
+    "deploy:firebase": "firebase deploy"
   }
 }

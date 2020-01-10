@@ -54,8 +54,8 @@ const Dashboard = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    expenses: state.expense.expenses
-    // expenses: state.firestore.ordered.expenses
+    // expenses: state.expense.expenses
+    expenses: state.firestore.ordered.expenses
   }
 }
 
