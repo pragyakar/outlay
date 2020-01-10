@@ -1,27 +1,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import moment from 'moment';
-import * as yup from 'yup';
+import addFormSchema from './addFormSchema';
 
-const schema = yup.object().shape({
-  timestamp: yup
-    .number()
-    .typeError("Type Error")
-    .required("Need the timestamp"),
-  amount: yup
-    .number()
-    .typeError("Need the amount")
-    .required("Need the amount"),
-  tag: yup
-    .string()
-    .required("Need a tag"),
-  remarks: yup
-    .string()
-});
 
 const AddForm = (props) => {
 
-  const { handleSubmit, register, errors } = useForm({ validationSchema: schema });
+  const { handleSubmit, register, errors } = useForm({ validationSchema: addFormSchema });
   const currentTimestamp = moment().format("x");
 
   const onSubmit = values => {    

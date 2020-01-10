@@ -54,18 +54,19 @@ const Dashboard = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    // expenses: state.expense.expenses
-    expenses: state.firestore.ordered.expenses
+    expenses: state.expense.expenses
+    // expenses: state.firestore.ordered.expenses
   }
 }
 
-export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([
-    { 
-      collection: 'expenses', 
-      limit: 30,
-      orderBy: 'timestamp'
-    }
-  ])
-)(Dashboard);
+export default connect(mapStateToProps)(Dashboard);
+// export default compose(
+//   connect(mapStateToProps),
+//   firestoreConnect([
+//     { 
+//       collection: 'expenses', 
+//       limit: 30,
+//       orderBy: 'timestamp'
+//     }
+//   ])
+// )(Dashboard);
