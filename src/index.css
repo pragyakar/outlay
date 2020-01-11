@@ -16,6 +16,10 @@ body {
   background-color: rgba(0,0,0,0.05);
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body, button, input {
   font-family: var(--font);
 }
@@ -238,6 +242,14 @@ body, button, input {
   text-align: center;
 }
 
+.history-final-row {
+  margin: 7px 10px;
+  padding: 12px;
+  color: var(--text-grey);
+  text-align: center;
+  font-size: 13px;
+}
+
 .title-row {
   background: var(--blue);
   color: var(--white);
@@ -248,6 +260,15 @@ body, button, input {
   border-radius: 30px;
   font-size: 14px;
   color: var(--white);
+}
+
+.history-table-scroll-view {
+  overflow: scroll;
+  height: 510px;
+}
+
+.history-table-scroll-view::-webkit-scrollbar {
+  display: none;
 }
 
 /* Welcome component */

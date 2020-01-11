@@ -18,12 +18,17 @@ const Table = (props) => {
         <div>Remarks</div>
         <div>Tag</div>
       </div>
+      <div className="history-table-scroll-view">
       {
         expenseHistory ? expenseHistory.map((expense) =>{
           const { id, ...rest} = expense;
           return (<TableRow key={id} {...rest} />);
         }): <div className="history-error-row">No records</div>
       } 
+      { expenseHistory ? 
+        <div className="history-final-row">That's all</div>
+      : null }
+      </div>
     </div>
   );
 }
