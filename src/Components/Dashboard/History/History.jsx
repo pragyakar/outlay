@@ -5,7 +5,7 @@ const History = (props) => {
   return (
     <div className="history-container">
       <p className="container-title">Recent Expenses 💵</p>
-      <p className="container-subtitle">Expense history from the last 5 days</p>
+      <p className="container-subtitle">Last 10 expense records</p>
       <HistoryTable expenses={props.expenses}/>
     </div> 
   )

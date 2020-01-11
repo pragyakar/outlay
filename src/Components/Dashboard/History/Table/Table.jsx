@@ -7,7 +7,7 @@ const Table = (props) => {
   const [ expenseHistory, setExpenseHistory] = useState([]);
 
   useEffect(() => {
-    setExpenseHistory(expenses.reverse().slice(0,4));
+    setExpenseHistory(expenses.reverse().slice(0,10));
   }, [expenses])
   
   return (
