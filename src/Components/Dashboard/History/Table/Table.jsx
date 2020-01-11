@@ -1,17 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import TableRow from './TableRow';
+import { 
+  getAllExpenses, 
+  getExpenseByCategory, 
+  getOtherExpenses 
+} from './TableData';
+import TableFilters from './Filters';
 
 const Table = (props) => {
 
   const { expenses } = props;
-  const [ expenseHistory, setExpenseHistory] = useState([]);
+  const [ tableData, setTableData] = useState([]);
+  const [ currentFilter, setCurrentFilter] = useState('all');
 
-  useEffect(() => {
-    setExpenseHistory(expenses.reverse().slice(0,10));
-  }, [expenses])
+  useEffect(() => {    
+    if (currentFilter.toLowerCase() === 'all') {
+      setTableData(getAllExpenses(expenses, 30));
+    } else if (currentFilter.toLowerCase() === 'others'){
+      setTableData(getOtherExpenses(expenses));
+    } else {
+      setTableData(getExpenseByCategory(expenses, currentFilter));
+    }
+  }, [expenses, currentFilter]);
+
+  const changeCurrentFilter = (tagName) => {
+    setCurrentFilter(tagName);
+  }
+  console.log(tableData,'change');
+  
   
   return (
     <div className="history-table">
+      <TableFilters 
+        changeCurrentFilter={changeCurrentFilter} 
+        currentFilter={currentFilter}
+      />
       <div className="history-table-row title-row">
         <div>Date</div>
         <div>Expense</div>
@@ -20,14 +43,18 @@ const Table = (props) => {
       </div>
       <div className="history-table-scroll-view">
       {
-        expenseHistory ? expenseHistory.map((expense) =>{
+        tableData && tableData.map((expense) =>{
           const { id, ...rest} = expense;
           return (<TableRow key={id} {...rest} />);
-        }): <div className="history-error-row">No records</div>
+        })
       } 
-      { expenseHistory ? 
-        <div className="history-final-row">That's all</div>
-      : null }
+      {
+        tableData.length === 0 && 
+          <div className="history-error-row">No records</div>
+      }
+      { tableData.length > 0 &&
+        <div className="history-final-row">That's all</div> 
+      }
       </div>
     </div>
   );

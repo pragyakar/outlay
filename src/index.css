@@ -264,11 +264,107 @@ body, button, input {
 
 .history-table-scroll-view {
   overflow: scroll;
-  height: 510px;
+  height: 465px;
 }
 
 .history-table-scroll-view::-webkit-scrollbar {
   display: none;
+}
+
+.history-table-filters {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.filter-tag {
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: var(--text-grey);
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.filter-tag:hover {
+  cursor: pointer;
+}
+
+.tag-all {
+  border: 1px solid rgba(136, 136, 136, 1);
+  color: rgba(136, 136, 136, 1);
+}
+
+.tag-all:hover, .tag-all.active {
+  background-color: rgba(136, 136, 136, 0.5);
+  color: var(--white);
+}
+
+.tag-food {
+  border: 1px solid rgba(255, 0, 0, 1);
+  color: rgba(255, 0, 0, 1);
+}
+
+.tag-food:hover, .tag-food.active {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: var(--white);
+}
+
+.tag-groceries {
+  border: 1px solid rgba(0, 122, 126, 1);
+  color: rgba(0, 122, 126, 1);
+}
+
+.tag-groceries:hover, .tag-groceries.active {
+  background-color: rgba(0, 122, 126, 0.5);
+  color: var(--white);
+}
+
+.tag-petrol {
+  border: 1px solid rgba(255, 129, 0, 1);
+  color: rgba(255, 129, 0, 1);
+}
+
+.tag-petrol:hover, .tag-petrol.active {
+  background-color: rgba(255, 129, 0, 0.5);
+  color: var(--white);
+}
+
+.tag-repairs {
+  border: 1px solid rgba(2, 0, 240, 1);
+  color: rgba(2, 0, 240, 1);
+}
+.tag-repairs:hover, .tag-repairs.active {
+  background-color: rgba(2, 0, 240, 0.5);
+  color: var(--white);
+}
+
+.tag-haircut {
+  border: 1px solid rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.tag-haircut:hover, .tag-haircut.active {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+}
+
+.tag-others {
+  border: 1px solid rgba(136, 136, 136, 1);
+}
+
+.tag-others:hover, .tag-others.active{
+  background-color: rgba(136, 136, 136, 0.5);
+  color: var(--white);
+}
+
+.tag-tax {
+ border: 1px solid rgba(198, 87, 255, 1);
+ color: rgba(198, 87, 255, 1); 
+}
+
+.tag-tax:hover, .tag-tax.active {
+  background-color: rgba(198, 87, 255, 0.5);
+  color: var(--white);
 }
 
 /* Welcome component */
