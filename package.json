@@ -46,6 +46,6 @@
     "start": "webpack-dev-server --open",
     "build": "webpack -p",
     "predeploy": "webpack -p",
-    "deploy:firebase": "firebase deploy"
+    "deploy:firebase": "predeploy && firebase deploy"
   }
 }
