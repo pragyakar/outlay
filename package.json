@@ -37,6 +37,7 @@
     "css-loader": "^3.4.1",
     "dotenv": "^8.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^3.0.0",
     "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
@@ -45,7 +46,8 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack -p",
+    "clean": "rimraf dist",
     "predeploy": "webpack -p",
-    "deploy:firebase": "predeploy && firebase deploy"
+    "deploy:firebase": "yarn clean && yarn predeploy && firebase deploy"
   }
 }

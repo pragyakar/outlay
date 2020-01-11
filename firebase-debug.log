@@ -1,0 +1,33 @@
+[debug] [2020-01-11T17:59:45.996Z] ----------------------------------------------------------------------
+[debug] [2020-01-11T17:59:45.998Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2020-01-11T17:59:45.998Z] CLI Version:   7.11.0
+[debug] [2020-01-11T17:59:45.998Z] Platform:      linux
+[debug] [2020-01-11T17:59:45.998Z] Node Version:  v11.15.0
+[debug] [2020-01-11T17:59:45.998Z] Time:          Sat Jan 11 2020 23:44:45 GMT+0545 (Nepal Time)
+[debug] [2020-01-11T17:59:45.998Z] ----------------------------------------------------------------------
+[debug] [2020-01-11T17:59:45.998Z] 
+[debug] [2020-01-11T17:59:46.002Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-11T17:59:46.002Z] > authorizing via signed-in user
+[debug] [2020-01-11T17:59:46.002Z] [iam] checking project outlay-bd873 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-01-11T17:59:46.004Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/outlay-bd873:testIamPermissions  
+
+[debug] [2020-01-11T17:59:47.899Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-11T17:59:47.900Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/outlay-bd873  
+ 
+[debug] [2020-01-11T17:59:48.530Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'outlay-bd873'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-01-11T17:59:48.534Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/outlay-bd873/versions  
+
+[debug] [2020-01-11T17:59:51.103Z] <<< HTTP RESPONSE 200
+[info] i  hosting[outlay-bd873]: beginning deploy...
+[info] i  hosting[outlay-bd873]: found 2 files in dist
+[debug] [2020-01-11T17:59:51.189Z] [hosting] hash cache [ZGlzdA] stored for 2 files
+[debug] [2020-01-11T17:59:51.189Z] [hosting][hash queue][FINAL]
+[debug] [2020-01-11T17:59:51.189Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/outlay-bd873/versions/a3fee552ddefd895:populateFiles  
+ <request body omitted>
+[debug] [2020-01-11T17:59:53.264Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-11T17:59:53.268Z] [hosting][populate queue][FINAL]
+[debug] [2020-01-11T17:59:53.268Z] [hosting] uploads queued: 1
