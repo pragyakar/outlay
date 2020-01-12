@@ -9,8 +9,8 @@ const AddModal = (props) => {
       <div className="modal-container">
         <p className="modal-close" onClick={props.closeModal}>❌</p>
         <div className="modal-form">
-        <p className="modal-title">Add Expense</p>
-         <AddForm handleSubmitForm={props.handleSubmit}/>
+          <p className="modal-title">Add Expense</p>
+          <AddForm handleSubmitForm={props.handleSubmit}/>
         </div>
       </div>
     </Modal>

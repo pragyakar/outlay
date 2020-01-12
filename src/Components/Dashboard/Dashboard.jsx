@@ -11,6 +11,7 @@ import Report from './Report';
 import LogoBox from './LogoBox';
 import AddButton from './AddButton';
 import Loader from '../UI/Loader';
+import ReportButton from './ReportButton/ReportButton';
 
 const Dashboard = (props) => {
 
@@ -27,8 +28,9 @@ const Dashboard = (props) => {
           <div className="welcome-wrapper grid-side">
             <Welcome user={user} />
           </div>
-          <div className="add-wrapper">
+          <div className="buttons-wrapper">
             <AddButton />
+            <ReportButton />
           </div>
         </div>
         

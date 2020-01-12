@@ -1,3 +1,3 @@
-import AddForm from './AddForm';
+import AddModal from './AddModal';
 
-export default AddForm;
+export default AddModal;

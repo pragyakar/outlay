@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AddModal from '../../AddExpense/AddModal';
+import AddModal from '../../AddExpense';
 import { connect } from 'react-redux';
 import { addExpense } from '../../../store/actions/expenseActions';  
 
@@ -18,8 +18,10 @@ const AddButton = (props) => {
 
   return (
     <>
-      <div className="add-container" onClick={toggleModal}>
-        <p className="add-button-text">Add Expense</p>
+      <div className="buttons-container" onClick={toggleModal}>
+        <div className="button">
+          <p className="button-text">Add Expense</p>
+        </div>
       </div>
       { modalVisibility &&
         <AddModal closeModal={toggleModal} handleSubmit={handleSubmit}/>

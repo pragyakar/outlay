@@ -42,7 +42,7 @@ body, button, input {
   grid-area: 1 / 2 / 2 / 7;
 }
 
-.add-wrapper {
+.buttons-wrapper {
   grid-area: 1 / 7 / 2 / 8;
 }
 
@@ -55,7 +55,7 @@ body, button, input {
   display: flex;
   align-items: center;
   justify-content: center;  
-  height: 124px;
+  height: 135px;
 }
 
 .logo-lg {
@@ -66,27 +66,31 @@ body, button, input {
 }
 
 /* AddButton component */
+.buttons-container {
+  
+  height: 50%;
+  color: var(--text-grey);
+}
 
-.add-container {
+.button {
   border-radius: 5px;
   background:var(--white);
   box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;  
-  height: 124px;
+  padding: 5px;
   transition: 0.2s ease;
-  color: var(--text-grey);
 }
 
-.add-container:hover {
+.button:hover {
   background-color: var(--blue);
   color: var(--white);
   cursor: pointer;
 }
 
-.add-button-text {
-  font-size: 20px;
+.button-text {
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -377,7 +381,7 @@ body, button, input {
 }
 
 .welcome-container {
-  padding: 30px;
+  padding: 35px;
 }
 
 .welcome-title {
