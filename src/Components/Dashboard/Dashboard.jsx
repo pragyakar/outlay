@@ -49,7 +49,7 @@ const Dashboard = (props) => {
           </div>
         </div>
       </div>
-    : <Loader />}
+    : <Loader text={'Please wait while we calculate your massive expenses...'} />}
     </div>
   );
 }

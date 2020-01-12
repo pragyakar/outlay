@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Loader = () => {
+const Loader = (props) => {
   return (
     <div className="loader-container">  
       <div className="loader" />
-      <span className="loading-text">Please wait while we calculate your massive expenses...</span>
+  <span className="loading-text">{props.text}</span>
     </div>
   );
 }
