@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Modal from '../../UI/Modal';
+import React from 'react';
+import Modal from '../UI/Modal';
 import AddForm from './AddForm';
 
 const AddModal = (props) => {

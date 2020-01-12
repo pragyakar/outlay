@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AddModal from './AddModal';
+import AddModal from '../../AddExpense/AddModal';
 import { connect } from 'react-redux';
 import { addExpense } from '../../../store/actions/expenseActions';  
 
