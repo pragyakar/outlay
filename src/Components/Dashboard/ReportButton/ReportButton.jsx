@@ -1,25 +1,13 @@
-import React, { useState } from 'react';
-import ReportsModal from '../../Reports/ReportsModal';
+import React from 'react';
 
 const ReportButton = () => {
 
-  const [modalVisibility, setModalVisibility] = useState(false);
-
-  const toggleModal = () => {
-    setModalVisibility(!modalVisibility);
-  }
-
   return (
-    <>
-    <div className="buttons-container" onClick={toggleModal}>
+    <div className="buttons-container">
       <div className="button">
         <p className="button-text">View Full Report</p>
       </div>
     </div>
-    { modalVisibility && 
-      <ReportsModal closeModal={toggleModal} />
-    }
-    </>
   );
 }
 
