@@ -13,6 +13,7 @@
   "author": "pragyakar <pragyakar75@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@nivo/bar": "^0.61.1",
     "@nivo/line": "^0.61.1",
     "firebase": "^7.6.1",
     "moment": "^2.24.0",

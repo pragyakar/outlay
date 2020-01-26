@@ -7,24 +7,24 @@ const AddButton = (props) => {
 
   const [modalVisibility, setModalVisibility] = useState(false);
 
-  const toggleModal = () => {
+  const toggleAddModal = () => {
     setModalVisibility(!modalVisibility);
   }
 
   const handleSubmit = (expenseObject) => {
     props.addExpense(expenseObject);
-    toggleModal();
+    toggleAddModal();
   }
 
   return (
     <>
-      <div className="buttons-container" onClick={toggleModal}>
+      <div className="buttons-container" onClick={toggleAddModal}>
         <div className="button">
           <p className="button-text">Add Expense</p>
         </div>
       </div>
       { modalVisibility &&
-        <AddModal closeModal={toggleModal} handleSubmit={handleSubmit}/>
+        <AddModal closeModal={toggleAddModal} handleSubmit={handleSubmit}/>
       }
     </>
   );

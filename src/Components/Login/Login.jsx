@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-const Auth = (props) => {
+const Login = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -46,4 +46,4 @@ const Auth = (props) => {
   );
 }
 
-export default Auth;
+export default Login;
