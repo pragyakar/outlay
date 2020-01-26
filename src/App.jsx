@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import Auth from './Components/Auth';
+import Login from './Components/Login';
 import Dashboard from './Components/Dashboard';
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
     <div className="App">
       { authenticated ? 
         <Dashboard user={user}/>
-        : <Auth setUser={setUser} setAuthenticated={setAuthenticated} /> 
+        : <Login setUser={setUser} setAuthenticated={setAuthenticated} /> 
       }
     </div>
   )
