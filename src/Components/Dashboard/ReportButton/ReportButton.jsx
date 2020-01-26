@@ -4,14 +4,9 @@ import MonthlyReport from '../../MonthlyReport/MonthlyReport';
 const ReportButton = () => {
 
   const [reportVisibility, setModalVisibility] = useState(false);
-  const [reportData, setReportData] = useState([]);
 
   const toggleReportModal = () => {
     setModalVisibility(!reportVisibility);
-  }
-
-  const fetchAllData = () => {
-
   }
 
   return (
@@ -22,7 +17,7 @@ const ReportButton = () => {
         </div>
       </div>
       { reportVisibility && 
-        <MonthlyReport closeModal={toggleReportModal} />
+          <MonthlyReport closeModal={toggleReportModal} />
       }
     </>
   );
