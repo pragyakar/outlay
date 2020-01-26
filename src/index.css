@@ -652,3 +652,32 @@ input[type="text"]:disabled {
   margin-top: 150px;
   position: absolute;
 }
+
+/* Monthly Report Modal */
+
+
+.report-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #122d4a;
+  background-attachment: fixed;
+}
+
+.report-modal-title {
+  font-size: 25px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--white);
+}
