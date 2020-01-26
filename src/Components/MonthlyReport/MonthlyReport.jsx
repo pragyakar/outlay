@@ -98,7 +98,7 @@ const MonthlyReport = (props) => {
           </div>
         </div>
       </Modal>
-      : <Loader />
+      : <Loader text={'Damn thats a lot of expenditure...'}/>
     }
     </>
   );
