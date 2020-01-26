@@ -15,7 +15,7 @@ const Table = (props) => {
 
   useEffect(() => {    
     if (currentFilter.toLowerCase() === 'all') {
-      setTableData(getAllExpenses(expenses, 30));
+      setTableData(getAllExpenses(expenses, 10));
     } else if (currentFilter.toLowerCase() === 'others'){
       setTableData(getOtherExpenses(expenses));
     } else {

@@ -1,5 +1,5 @@
 export const getAllExpenses = (expenses, threshold) => {
-  let allExpenses = expenses.reverse().slice(0, threshold);
+  let allExpenses = expenses.slice(0, threshold);
   return allExpenses;
 }
 
