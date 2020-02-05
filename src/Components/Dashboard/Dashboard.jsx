@@ -1,12 +1,17 @@
 import React from 'react';
-import '../../index.css';
+import { BrowserRouter } from 'react-router-dom';
 
+import '../../index.css';
+import Navbar from './Navbar';
 import DashboardRouter from './DashboardRouter';
 
 const Dashboard = () => {
   return (
     <div className="root-container">
-      <DashboardRouter />
+      <BrowserRouter>
+        <Navbar />
+        <DashboardRouter />
+      </BrowserRouter>
     </div>
   );
 }

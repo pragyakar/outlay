@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+
+import Home from './Home';
+import Reports from './Reports';
 
 const NotFound = () => {
   return (
@@ -9,13 +12,11 @@ const NotFound = () => {
 
 const DashboardRouter = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={NotFound} />
-        <Route exact path="/reports" component={NotFound} />
-        <Route component={NotFound} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/reports" component={Reports} />
+      <Route component={NotFound} />
+    </Switch>
   );
 }
 
