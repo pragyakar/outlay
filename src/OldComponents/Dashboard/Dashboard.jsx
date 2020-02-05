@@ -15,7 +15,7 @@ import ReportButton from './ReportButton/ReportButton';
 
 const Dashboard = (props) => {
 
-  const { user, expenses } = props;
+  const { expenses } = props;
 
   return (
     <div className="main-container">
@@ -26,7 +26,7 @@ const Dashboard = (props) => {
             <LogoBox />
           </div>
           <div className="welcome-wrapper grid-side">
-            <Welcome user={user} />
+            <Welcome user={'pragyakar'} />
           </div>
           <div className="buttons-wrapper">
             <AddButton />
