@@ -89,7 +89,7 @@ body, button, input {
   font-size: 22px;
 }
 
-.navItem:hover {
+.navItem:hover, .navItem.active {
   background: var(--blue);
   color: var(--white);
   transition: 0.3s ease;
