@@ -1,8 +1,13 @@
 import React from 'react';
+import '../../index.css';
+
+import DashboardRouter from './DashboardRouter';
 
 const Dashboard = () => {
   return (
-    <h1>Dashboard v2</h1>
+    <div className="root-container">
+      <DashboardRouter />
+    </div>
   );
 }
 
