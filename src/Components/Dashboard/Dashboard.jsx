@@ -10,7 +10,9 @@ const Dashboard = () => {
     <div className="root-container">
       <BrowserRouter>
         <Navbar />
-        <DashboardRouter />
+        <div className="body-container">
+          <DashboardRouter />
+        </div>
       </BrowserRouter>
     </div>
   );
