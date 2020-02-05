@@ -6,7 +6,7 @@ import Reports from './Reports';
 
 const NotFound = () => {
   return (
-    <p>Non Existant Route</p>
+    <div>Non Existant Route</div>
   );
 }
 
@@ -15,6 +15,7 @@ const DashboardRouter = () => {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/reports" component={Reports} />
+      <Route exact path="/settings" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
