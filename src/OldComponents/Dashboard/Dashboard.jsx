@@ -12,6 +12,7 @@ import LogoBox from './LogoBox';
 import AddButton from './AddButton';
 import Loader from '../UI/Loader';
 import ReportButton from './ReportButton/ReportButton';
+import '../../old-index.css';
 
 const Dashboard = (props) => {
 

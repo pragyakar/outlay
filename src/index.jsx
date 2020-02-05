@@ -10,7 +10,6 @@ import { ReactReduxFirebaseProvider, reactReduxFirebase, getFirebase } from 'rea
 import App from './App';
 import rootReducer from './store/reducers/rootReducer';
 import firebaseConfig from './configs/firebaseConfig';
-import './index.css';
 
 
 const store = createStore(
