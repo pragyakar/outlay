@@ -1,9 +1,5 @@
 import React from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHome, faChartLine, faCog } from '@fortawesome/free-solid-svg-icons'
 import NavItem from './NavItem';
-
-library.add(faHome, faChartLine, faCog);
 
 const Navbar = () => {
   return (

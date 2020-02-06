@@ -1,6 +1,10 @@
 import React, { useState, useEffect} from 'react';
+import registerFonts from './fontawesome';
+
 import Login from './Components/Login';
 import Router from './Router';
+
+registerFonts();
 
 const App = () => {
 
