@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from './Home';
 import Reports from './Reports';
+import Settings from './Settings';
 
 const NotFound = () => {
   return (
@@ -15,7 +16,7 @@ const DashboardRouter = () => {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/reports" component={Reports} />
-      <Route exact path="/settings" component={NotFound} />
+      <Route exact path="/settings" component={Settings} />
       <Route component={NotFound} />
     </Switch>
   );
