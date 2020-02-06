@@ -1,12 +1,39 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState, Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import AddExpenseModal from './AddExpenseModal';
+import { connect } from 'react-redux';
 
 const AddExpense = () => {
+
+  const [modalVisibility, setModalVisibility] = useState(true);
+
+  const toggleModal = () => {
+    setModalVisibility(!modalVisibility);
+  }
+
+  const handleSubmit = (expenseObject) => {
+    props.addExpense(expenseObject);
+    toggleAddModal();
+  }
+
   return (
-    <div className="add-button">
-      <FontAwesomeIcon icon={'plus'} />  
-    </div>
+    <Fragment>
+      <div className="add-button" onClick={toggleModal} >
+        <FontAwesomeIcon icon={'plus'} />  
+      </div>
+      {modalVisibility ? <AddExpenseModal closeModal={toggleModal} handleSubmit={handleSubmit}/> : ''}
+    </Fragment>
   );
 }
 
-export default AddExpense;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addExpense: (expense) => dispatch(addExpense(expense))
+  }
+}
+
+export default connect(
+  null, 
+  mapDispatchToProps
+)(AddExpense);
