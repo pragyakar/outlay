@@ -114,3 +114,22 @@ body, button, input {
   padding: 20px;
 }
 
+/* Add Button */
+.add-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 70px;
+  width: 70px;
+  background-color: var(--blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  color: var(--white);
+  font-size: 22px;
+}
+
+.add-button:hover {
+  cursor: pointer;
+}
