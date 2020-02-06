@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 const AddExpense = () => {
 
-  const [modalVisibility, setModalVisibility] = useState(true);
+  const [modalVisibility, setModalVisibility] = useState(false);
 
   const toggleModal = () => {
     setModalVisibility(!modalVisibility);
@@ -14,7 +14,7 @@ const AddExpense = () => {
 
   const handleSubmit = (expenseObject) => {
     props.addExpense(expenseObject);
-    toggleAddModal();
+    toggleModal();
   }
 
   return (

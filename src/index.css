@@ -13,7 +13,7 @@
 
 body {
   margin: 0;
-  background-color: rgba(0,0,0,0.05);
+  background-color: var(--white);
 }
 
 body::-webkit-scrollbar {
@@ -105,13 +105,19 @@ body, button, input {
 
 .summary-container {
   width: 30%;
-  background-color: var(--white);
+  background-color: rgba(0,0,0,0.05);
   height: 100vh;
   float: left;
+  overflow: scroll;
+  /* padding-bottom: 10px; */
+}
+
+.summary-container::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
-  padding: 20px;
+  padding: 30px;
 }
 
 /* Add Expense */
@@ -217,4 +223,71 @@ body, button, input {
   font-size: 13px;
   color: var(--red);
   display: block;
+}
+
+/* Recent Expenses */
+
+.recent-container {
+  margin-top: 25px;
+}
+
+.recent-title {
+  font-weight: 700;
+  color: var(--grey);
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+.expense-card {
+  /* min-height: 70px; */
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10px;
+  margin: 20px 0px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.expense-card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding: 20px;
+}
+
+.expense-card-tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: flex-end;
+  padding-right: 30px;
+}
+
+.expense-card-title {
+  font-size: 17px;
+  font-weight: 700;
+  display: block;
+}
+
+.expense-card-date {
+  color: rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+  display: block;
+  font-size: 13px;
+}
+
+.expense-card-remarks {
+  color: var(--light-grey);
+  display: block;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+
+.expense-card-tag {
+  padding: 6px 11px;
+  border-radius: 30px;
+  font-size: 13px;
+  color: var(--white);
 }
