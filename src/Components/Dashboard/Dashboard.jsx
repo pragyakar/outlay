@@ -16,7 +16,8 @@ import ReportButton from './ReportButton/ReportButton';
 const Dashboard = (props) => {
 
   const { user, expenses } = props;
-
+  console.log(expenses);
+  
   return (
     <div className="main-container">
     {expenses ? 
@@ -56,19 +57,19 @@ const Dashboard = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    expenses: state.expense.expenses
-    // expenses: state.firestore.ordered.expenses
+    // expenses: state.expense.expenses
+    expenses: state.firestore.ordered.expenses
   }
 }
 
-export default connect(mapStateToProps)(Dashboard);
-// export default compose(
-//   connect(mapStateToProps),
-//   firestoreConnect([
-//     { 
-//       collection: 'expenses', 
-//       limit: 30,
-//       orderBy: 'timestamp'
-//     }
-//   ])
-// )(Dashboard);
+// export default connect(mapStateToProps)(Dashboard);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { 
+      collection: 'expenses', 
+      // limit: 30,
+      orderBy: ['timestamp', 'desc'],
+    }
+  ])
+)(Dashboard);
