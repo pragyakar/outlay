@@ -2,16 +2,15 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import {firestoreConnect} from 'react-redux-firebase';
+import appConstants from '../../../configs/appConstants';
 
 import RecentExpenses from './RecentExpenses';
 import TopStats from './TopStats';
 
-const RECENT_THRESHOLD = 6;
-
 const Home = (props) => {
   
   const allExpenses = props.expenses;
-  const someExpenses = allExpenses && allExpenses.slice(0, RECENT_THRESHOLD);
+  const someExpenses = allExpenses && allExpenses.slice(0, appConstants.RECENT_EXPENSES_COUNT);
 
   return (
     <Fragment>
