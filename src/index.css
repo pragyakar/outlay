@@ -98,12 +98,12 @@ body, button, input {
 
 /* Home */
 
-.graph-container {
+.left-container {
   width: 75%;
   float: left;
 }
 
-.summary-container {
+.right-container {
   width: 25%;
   background-color: rgba(0,0,0,0.05);
   height: 100vh;
@@ -112,7 +112,7 @@ body, button, input {
   /* padding-bottom: 10px; */
 }
 
-.summary-container::-webkit-scrollbar {
+.right-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -293,4 +293,61 @@ body, button, input {
   border-radius: 30px;
   font-size: 13px;
   color: var(--white);
+}
+
+/* Top Stats Container  */
+
+.top-stats-container {
+  /* background-color: var(--blue); */
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: 120px;
+  grid-gap: 30px;
+}
+
+.stats-grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+
+}
+
+.stats-one {
+
+}
+
+.stats-two {
+
+}
+
+.stats-three {
+
+}
+
+.stats-four {
+
+}
+
+
+.currency {
+  color: var(--blue);
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.amount {
+  font-size: 35px;
+  margin-right: 20px;
+}
+
+.stat-label {
+  color: var(--light-grey);
 }

@@ -4,6 +4,7 @@ import { compose } from 'redux';
 import {firestoreConnect} from 'react-redux-firebase';
 
 import RecentExpenses from './RecentExpenses';
+import TopStats from './TopStats';
 
 const RECENT_THRESHOLD = 6;
 
@@ -14,12 +15,16 @@ const Home = (props) => {
 
   return (
     <Fragment>
-      <div className="graph-container">
-        <div className="container">
-          
+      <div className="left-container">
+        <TopStats />  
+        <div className="graph-container">
+          <div className="container">
+          </div>
         </div>
       </div>
-      <RecentExpenses expenses={someExpenses}/>
+      <div className="right-container">
+        <RecentExpenses expenses={someExpenses}/>
+      </div>
     </Fragment>
   );
 }

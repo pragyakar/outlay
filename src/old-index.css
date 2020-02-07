@@ -441,6 +441,7 @@ body, button, input {
 .currency {
   color: var(--blue);
   font-size: 16px;
+  margin-right: 5px;
 }
 
 .tips {

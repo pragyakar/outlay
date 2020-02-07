@@ -6,7 +6,6 @@ const RecentExpenses = (props) => {
   const { expenses } = props;
 
   return (
-    <div className="summary-container">
       <div className="container">
         <span className="recent-title">Recent Expenses</span>
         <div className="recent-container">
@@ -27,7 +26,6 @@ const RecentExpenses = (props) => {
           { expenses ? '' : 'Loading...' }
         </div>
       </div>
-    </div>
   );
 }
 
