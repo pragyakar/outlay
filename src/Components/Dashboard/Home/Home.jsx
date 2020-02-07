@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import {firestoreConnect} from 'react-redux-firebase';
-import appConstants from '../../../configs/appConstants';
 
+import appConstants from '../../../configs/appConstants';
 import RecentExpenses from './RecentExpenses';
 import TopStats from './TopStats';
 
@@ -15,7 +15,7 @@ const Home = (props) => {
   return (
     <Fragment>
       <div className="left-container">
-        <TopStats />  
+        {/* <TopStats />   */}
         <div className="graph-container">
           <div className="container">
           </div>

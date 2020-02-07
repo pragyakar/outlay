@@ -13,8 +13,8 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Dashboard} />
         <Route exact path="/v1" component={OldDashboard} />
+        <Route path="/" component={Dashboard} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
