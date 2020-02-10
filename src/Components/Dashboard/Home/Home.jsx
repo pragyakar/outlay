@@ -5,8 +5,8 @@ import {firestoreConnect} from 'react-redux-firebase';
 
 import appConstants from '../../../configs/appConstants';
 import RecentExpenses from './RecentExpenses';
-import TopStats from './TopStats';
 import SummaryGraph from './SummaryGraph';
+import AdviceBox from './AdviceBox';
 
 const Home = (props) => {
   
@@ -18,7 +18,12 @@ const Home = (props) => {
       { allExpenses ? 
         <div>
           <div className="left-container">
-            <SummaryGraph expenses={allExpenses}/>
+            <div className="top-box">
+              <AdviceBox />
+            </div>
+            <div className="bottom-box">
+              <SummaryGraph expenses={allExpenses}/>
+            </div>
           </div>
           <div className="right-container">
             <RecentExpenses expenses={someExpenses}/>
