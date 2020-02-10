@@ -351,3 +351,7 @@ body, button, input {
 .stat-label {
   color: var(--light-grey);
 }
+
+.graph-box {
+  height: 500px;
+}
