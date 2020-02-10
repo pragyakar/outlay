@@ -19,7 +19,7 @@ const Home = (props) => {
         <div>
           <div className="left-container">
             <div className="top-box">
-              <AdviceBox />
+              <AdviceBox expenses={allExpenses}/>
             </div>
             <div className="bottom-box">
               <SummaryGraph expenses={allExpenses}/>
@@ -36,19 +36,19 @@ const Home = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    // expenses: state.expense.expenses
-    expenses: state.firestore.ordered.expenses
+    expenses: state.expense.expenses
+    // expenses: state.firestore.ordered.expenses
   }
 }
 
-// export default connect(mapStateToProps)(Home);
-export default compose(
-  connect(mapStateToProps),
-  firestoreConnect([
-    { 
-      collection: 'expenses', 
-      limit: 50,
-      orderBy: ['timestamp', 'desc']
-    }
-  ])
-)(Home);
+export default connect(mapStateToProps)(Home);
+// export default compose(
+//   connect(mapStateToProps),
+//   firestoreConnect([
+//     { 
+//       collection: 'expenses', 
+//       limit: 50,
+//       orderBy: ['timestamp', 'desc']
+//     }
+//   ])
+// )(Home);

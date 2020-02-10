@@ -8,7 +8,6 @@ const SummaryGraph = (props) => {
 
   const { expenses } = props;
   const graphData = groupExpensesByDay(expenses);
-  console.log(graphData);
   
   const data = {
     "id": "Expenses",

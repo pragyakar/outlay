@@ -19,5 +19,5 @@ export const groupExpensesByDay = (expenses) => {
       groupedExpenses.push(groupedObject);
     }
   });
-  return groupedExpenses;
+  return groupedExpenses.reverse();
 }

@@ -1,8 +1,10 @@
 import React from 'react';
+import { getTodaysExpenses } from '../../../../DataFunctions/calculations';
 
 const AdviceBox = (props) => {
-
-  const currentExpenditure = 550; 
+  
+  const { expenses } = props;
+  const currentExpenditure = getTodaysExpenses(expenses); 
 
   const advice = (expense) => {
     if (expense <= 0) {
