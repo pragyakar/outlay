@@ -329,12 +329,37 @@ body, button, input {
   font-size: 35px;
 }
 
-.txt-info-a {
+.txt-info {
   color: var(--light-grey);
   font-size: 18px;
+  padding-bottom: 30px;
 }
 
 .txt-money {
   font-size: 27px;
   color: var(--grey);
+}
+
+.report-button {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  color: var(--blue);
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.report-button svg {
+  margin-left: 12px;
+}
+
+.report-button:hover {
+  background-color: var(--blue);
+  cursor: pointer;
+  color: var(--white);
+  transition: 0.3s ease;
 }

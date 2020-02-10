@@ -1,5 +1,5 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHome, faChartLine, faCog, faPlus, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faChartLine, faCog, faPlus, faTimesCircle, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 
 const registerFonts = () => {
   library.add(
@@ -7,7 +7,8 @@ const registerFonts = () => {
     faChartLine, 
     faCog,
     faPlus,
-    faTimesCircle
+    faTimesCircle,
+    faArrowAltCircleRight
   );
 }
 

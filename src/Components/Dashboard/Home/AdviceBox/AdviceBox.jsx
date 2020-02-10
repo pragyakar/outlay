@@ -1,5 +1,7 @@
 import React from 'react';
 import { getTodaysExpenses } from '../../../../DataFunctions/calculations';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const AdviceBox = (props) => {
   
@@ -23,13 +25,19 @@ const AdviceBox = (props) => {
   return (
     <div className="container">
       <p className="txt-welcome">Welcome back, pragyakar.</p>
-      <p className="txt-info-a">You have spent 
+      <p className="txt-info">You have spent 
         {" "}
         <span className="txt-money">NRs.{" "}{currentExpenditure}</span>
         {" "} today.
         <br />
         {advice(currentExpenditure)}
       </p>
+      <Link to="/reports">
+        <span className="report-button">
+          View Full Report 
+          <FontAwesomeIcon icon={"arrow-alt-circle-right"} />
+        </span>
+      </Link>
     </div>
   );
 }
